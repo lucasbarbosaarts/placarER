@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Placar ER</title>
+    <style>
+      .teste {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .scoreboard {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+      }
+      .scoreboard1 {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+      }
+      .team {
+        text-align: center;
+      }
+      .team span {
+        font-size: 160px;
+      }
+      body {
+        background-image: url('images/er.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+      </style>
+      <h1></h1>
+      <div class="teste">
+        <div id="cardyellow" class="scoreboard">
+          <div class="team">
+            <span id="teamAScore">0</span><br />
+            <button class="buttonPlacar" onclick="addPoint('A')"><img class="mais" src="./icons/add-plus-circle-svgrepo-com.svg" ></button>
+            <button class="buttonPlacar" onclick="zeroPoint('A')"><img class="reset" src="./icons/reset-reload-refresh-sync-arrow-update-svgrepo-com.svg" ></button>
+            <button class="buttonPlacar" onclick="removePoint('A')"><img class="menos" src="./icons/add-minus-square-svgrepo-com.svg" ></button>
+          </div>
+        </div>
+        <div></div>
+        <div id="cardblue" class="scoreboard1">
+          <div class="team">
+            <span id="teamBScore">0</span><br />
+            <button class="buttonPlacar" onclick="addPoint('B')"><img class="mais" src="./icons/add-plus-circle-svgrepo-com.svg" ></button>
+            <button class="buttonPlacar" onclick="zeroPoint('B')"><img class="reset" src="./icons/reset-reload-refresh-sync-arrow-update-svgrepo-com.svg" ></button>
+            <button class="buttonPlacar" onclick="removePoint('B')"><img class="menos" src="./icons/add-minus-square-svgrepo-com.svg" ></button>
+          </div>
+        </div>
+        <div></div>
+        <div id="cardwhite" class="scoreboard1">
+          <div class="team">
+            <span id="teamCScore">0</span><br />
+            <button class="buttonPlacar" onclick="addPoint('C')"><img class="mais" src="./icons/add-plus-circle-svgrepo-com.svg" ></button>
+            <button class="buttonPlacar" onclick="zeroPoint('C')"><img class="reset" src="./icons/reset-reload-refresh-sync-arrow-update-svgrepo-com.svg" ></button>
+            <button class="buttonPlacar" onclick="removePoint('C')"><img class="menos" src="./icons/add-minus-square-svgrepo-com.svg" ></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="stopwatch">
+        <div class="circle">
+          <span class="time" id="display">00:00:00</span>
+        </div>
+
+        <div class="controls">
+          <button class="buttonPlay button">
+            <img id="playButton" src="./icons/play-svgrepo-com.svg" />
+
+            <img id="pauseButton" src="./icons/pause-circle-svgrepo-com.svg" />
+          </button>
+
+          <button class="buttonReset button">
+            <img id="resetButton" src='./icons/stop-circle-svgrepo-com.svg' />
+          </button>
+        </div>
+      </div>
+
+      <script>
+        let teamAScore = 0;
+        let teamBScore = 0;
+        let teamCScore = 0;
+
+        function addPoint(team) {
+          if (team === "A") {
+            teamAScore = 50 + teamAScore++;
+            document.getElementById("teamAScore").textContent = teamAScore;
+          } else if (team === "B") {
+            teamBScore = 50 + teamBScore++;
+            document.getElementById("teamBScore").textContent = teamBScore;
+          } else if (team === "C") {
+            teamCScore = 50 + teamCScore++;
+            document.getElementById("teamCScore").textContent = teamCScore;
+          }
+        }
+        function removePoint(team) {
+          if (team === "A" && teamAScore > 0) {
+            teamAScore--;
+            document.getElementById("teamAScore").textContent = teamAScore;
+          } else if (team === "B" && teamBScore > 0) {
+            teamBScore--;
+            document.getElementById("teamBScore").textContent = teamBScore;
+          } else if (team === "C" && teamCScore > 0) {
+            teamCScore--;
+            document.getElementById("teamCScore").textContent = teamCScore;
+          }
+        }
+        function zeroPoint(team) {
+          if (team === "A" && teamAScore != 0) {
+            teamAScore = 0;
+            document.getElementById("teamAScore").textContent = teamAScore;
+          } else if (team === "B" && teamBScore != 0) {
+            teamBScore = 0;
+            document.getElementById("teamBScore").textContent = teamBScore;
+          } else if (team === "C" && teamCScore != 0) {
+            teamCScore = 0;
+            document.getElementById("teamCScore").textContent = teamCScore;
+          }
+        }
+      </script>
+      <script src="script.js"></script>
+      <div class="bg-image"></div>
+    </div>
+  </body>
+</html>

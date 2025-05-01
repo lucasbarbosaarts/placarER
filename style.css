@@ -1,0 +1,130 @@
+body {
+/*   background-image: url(https://topma.com.br/wp-content/uploads/2023/04/Design-sem-nome.png);
+  font-family: "Montserrat", sans-serif;
+  background-position: center left; 
+  background: rgb(230,227,227);*/
+  background: radial-gradient(circle, rgba(230,227,227,1) 50%, rgba(153,153,153,1) 100%);
+  font-family: "Montserrat", sans-serif;
+}
+
+#cardyellow {
+  width: 350px;
+  height: 350px;
+  border-radius: 30px;
+  background: yellow;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+#cardblue {
+  width: 350px;
+  height: 350px;
+  border-radius: 30px;
+  background: blue;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+#cardwhite {
+  width: 350px;
+  height: 350px;
+  border-radius: 30px;
+  background: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+
+  text-align: center;
+  line-height: 59px;
+
+  padding: 0 64px;
+  margin: 0;
+}
+
+.stopwatch {
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 23px;
+  padding-top: 25px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+  width: 200px;
+  color: azure;
+
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+.time {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 100;
+  font-size: 40px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.button {
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: auto;
+}
+.buttonPlacar {
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: auto;
+  width: 30px;
+  height: 30px;
+}
+
+#playButton {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+#pauseButton {
+  display: none;
+  width: 60px;
+  height: 60px;
+}
+
+#resetButton {
+  width: 60px;
+  height: 60px;
+}
+
+.mais {
+  width: 20px;
+  height: 20px;
+}
+
+.reset {
+  width: 20px;
+  height: 20px;
+}
+
+.menos {
+  width: 20px;
+  height: 20px;
+}
